@@ -9,3 +9,11 @@ type Set[T comparable] interface {
 	Contains(val T) bool
 	Clone() Set[T]
 }
+
+func NewOrderedSet[T comparable]() Set[T] {
+	return newOrderedSet[T]()
+}
+
+func NewSet[T comparable]() Set[T] {
+	return unorderedSet[T]{}
+}
